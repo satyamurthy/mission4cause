@@ -1,4 +1,7 @@
 Mission4cause::Application.routes.draw do
+  resources :causes
+
+
   devise_for :users
 
   root :to => 'pages#home'

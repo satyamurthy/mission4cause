@@ -1,0 +1,20 @@
+<h1>Listing causes</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <%= render @causes %>
+  <tbody>
+</table>
+
+<br />
+
+<%= link_to 'New Cause', new_cause_path %>

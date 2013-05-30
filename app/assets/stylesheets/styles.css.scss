@@ -1,6 +1,11 @@
-$navbarBackgroundHighlight: white;
-$navbarBackground: white;
-$btnPrimaryBackground: purple;
+$baseFontFamily: Oxygen;
+@import url(http://fonts.googleapis.com/css?family=Oxygen);
+
+$navbarBackgroundHighlight: gray;
+$navbarBackground: gray;
+/*$btnPrimaryBackground: blue;*/
+$navbarLinkColor: lightGray;
+$navbarText: gray;
 
 @import 'bootstrap';
 body{

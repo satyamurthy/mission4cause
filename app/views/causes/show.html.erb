@@ -4,7 +4,12 @@
 		<p>
 		  <%= @cause.description %>
 		</p>
+		<p>
+		  <%= @cause.user.name %>
+		</p>
+		<% if current_user == @cause.user %>
 		<%= link_to 'Edit', edit_cause_path(@cause) %> |
+		<% end %>
 		<%= link_to 'Back', causes_path %>
 	</div>
 	</div>

@@ -1,6 +1,8 @@
 <tr>
 	<td><%= cause.description %></td>
 	<td><%= link_to 'Show', cause %></td>
-	<td><%= link_to 'Edit', edit_cause_path(cause) %></td>
-	<td><%= link_to 'Destroy', cause, method: :delete, data: { confirm: 'Are you sure you want to delete?' } %></td>
+	<% if current_user == cause.user %>
+		<td><%= link_to 'Edit', edit_cause_path(cause) %></td>
+		<td><%= link_to 'Delete', cause, method: :delete, data: { confirm: 'Are you sure you want to delete?' } %></td>
+	<% end %>
 </tr>

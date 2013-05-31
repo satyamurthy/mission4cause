@@ -1,4 +1,5 @@
 class CausesController < ApplicationController
+  before_filter :authenticate_user!, except: [:index]
   # GET /causes
   # GET /causes.json
   def index
@@ -24,7 +25,7 @@ class CausesController < ApplicationController
   # GET /causes/new
   # GET /causes/new.json
   def new
-    @cause = Cause.new
+    @cause = current_user.causes.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -34,13 +35,13 @@ class CausesController < ApplicationController
 
   # GET /causes/1/edit
   def edit
-    @cause = Cause.find(params[:id])
+    @cause = current_user.causes.find(params[:id])
   end
 
   # POST /causes
   # POST /causes.json
   def create
-    @cause = Cause.new(params[:cause])
+    @cause = current_user.causes.new(params[:cause])
 
     respond_to do |format|
       if @cause.save
@@ -56,7 +57,7 @@ class CausesController < ApplicationController
   # PUT /causes/1
   # PUT /causes/1.json
   def update
-    @cause = Cause.find(params[:id])
+    @cause = current_user.causes.find(params[:id])
 
     respond_to do |format|
       if @cause.update_attributes(params[:cause])
@@ -72,7 +73,7 @@ class CausesController < ApplicationController
   # DELETE /causes/1
   # DELETE /causes/1.json
   def destroy
-    @cause = Cause.find(params[:id])
+    @cause = current_user.causes.find(params[:id])
     @cause.destroy
 
     respond_to do |format|

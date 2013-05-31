@@ -1,4 +1,5 @@
 <tr>
+	<td><%= image_tag cause.image(:medium) %></td>
 	<td><%= cause.description %></td>
 	<td><%= link_to 'Show', cause %></td>
 	<% if current_user == cause.user %>

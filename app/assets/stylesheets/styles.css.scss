@@ -27,6 +27,32 @@ body{
     }
 }
 
+/* Required for jQuery Masonry */
+
+.box {
+    margin: 5px;
+    padding: 5px;
+    font-size: 13px;
+    line-height: 1.4em;
+    float: left;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 3px;
+    box-shadow: 1px 1px 4px #444;
+    width: 214px;
+}
+
+.box img {
+    width: 100%;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
+
+.description {
+    margin: 10px 0 5px;
+}
+
 .btn-custom {
   background-color: hsl(0, 100%, 79%) !important;
   background-repeat: repeat-x;

@@ -1,9 +1,15 @@
-<tr>
-	<td><%= image_tag cause.image(:medium) %></td>
-	<td><%= cause.description %></td>
-	<td><%= link_to 'Show', cause %></td>
+<div class="box">
+	<%= link_to (image_tag cause.image(:medium)), cause %>
+	<p class="description">
+		<%= cause.description %>
+		<strong>
+			posted by <%= cause.user.name %>
+		</strong>
+	</p>
 	<% if current_user == cause.user %>
-		<td><%= link_to 'Edit', edit_cause_path(cause) %></td>
-		<td><%= link_to 'Delete', cause, method: :delete, data: { confirm: 'Are you sure you want to delete?' } %></td>
+		<p>
+		<%= link_to 'Edit', edit_cause_path(cause) %>
+		<%= link_to 'Delete', cause, method: :delete, data: { confirm: 'Are you sure you want to delete?' } %>
+		</p>
 	<% end %>
-</tr>
+</div>

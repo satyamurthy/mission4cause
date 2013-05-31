@@ -3,7 +3,7 @@ class CausesController < ApplicationController
   # GET /causes
   # GET /causes.json
   def index
-    @causes = Cause.all
+    @causes = Cause.order("created_at desc")
 
     respond_to do |format|
       format.html # index.html.erb

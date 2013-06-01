@@ -2,9 +2,7 @@
 	<%= link_to (image_tag cause.image(:medium)), cause %>
 	<p class="description">
 		<%= cause.description %>
-		<strong>
-			posted by <%= cause.user.name %>
-		</strong>
+			<small>added by <%= cause.user.name %></small>
 	</p>
 	<% if current_user == cause.user %>
 		<p>

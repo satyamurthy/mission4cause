@@ -1,17 +1,50 @@
 <div class="row">
-	<div class="span6 offset3">
+	<div class="span8">
 		<div class="well">
 			<%= image_tag @cause.image %>
 		<p>
-		  <%= @cause.description %>
+		  Name : <%= @cause.cause_name %>
 		</p>
 		<p>
-		  <%= @cause.user.name %>
+		  Vision : <%= @cause.description %>
+		</p>
+		<p>
+		  Country : <%= @cause.cause_country %>
+		</p>
+		<p>
+		  About : <%= @cause.long_description %>
+		</p>
+		<p>
+		  <small>Added by : <%= @cause.user.name %></small>
 		</p>
 		<% if current_user == @cause.user %>
 		<%= link_to 'Edit', edit_cause_path(@cause) %> |
 		<% end %>
 		<%= link_to 'Back', causes_path %>
+	</div>
+	</div>
+		<div class="span4">
+		<div class="well well-small">
+			<%= image_tag @cause.image %>
+		<p>
+		  Name : <%= @cause.cause_name %>
+		</p>
+		<p>
+		  Vision : <%= @cause.description %>
+		</p>
+		<p>
+		  Country : <%= @cause.cause_country %>
+		</p>
+		<p>
+		  About Me : <%= @cause.long_description %>
+		</p>
+		<% if current_user == @cause.user %>
+			<div class="btn-group">
+				<button class="btn"><%= link_to 'Add a cause', new_cause_path %></button>
+				<button class="btn"><%= link_to 'Edit my profile', edit_user_registration_path %></button>
+	        	<button class="btn"><%= link_to 'Logout', destroy_user_session_path, method: :delete %></button>
+        	</div>
+		<% end %>
 	</div>
 	</div>
 </div>

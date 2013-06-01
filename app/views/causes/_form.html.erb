@@ -4,8 +4,11 @@
   <%= f.full_error :image_content_type, class: "alert alert-error" %>
 
 	<%= f.input :image, label: "Upload a logo" %>
-	<%= f.input :image_remote_url, label: "or enter a URL" %>
-	<%= f.input :description, as: :text, input_html: { rows: "3" } %>
+	<%= f.input :image_remote_url, label: "or paste a URL" %>
+	<%= f.input :cause_name, label: "Name of the Cause", :input_html => { :maxlength => 40, :size => 100 } %>
+	<%= f.input :cause_country, label: "Country where active" %>
+	<%= f.input :description, as: :text, label: "Vision", input_html: { :maxlength => 100, rows: "3" } %>
+	<%= f.input :long_description, as: :text, label: "Description", input_html: { :maxlength => 1000, rows: "10" } %>
 
   <div class="form-actions">
     <%= f.button :submit, class: "btn btn-primary" %>

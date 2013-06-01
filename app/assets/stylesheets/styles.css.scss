@@ -1,8 +1,8 @@
-$baseFontFamily: Oxygen;
-@import url(http://fonts.googleapis.com/css?family=Oxygen);
+$baseFontFamily: 'Oxygen', sans-serif;
+@import url(http://fonts.googleapis.com/css?family=Oxygen:400,700);
 
-$navbarBackgroundHighlight: black;
-$navbarBackground: black;
+/*$navbarBackgroundHighlight: black;*/
+/*$navbarBackground: black;*/
 $btnPrimaryBackground: purple;
 $navbarLinkColor: gray;
 $navbarText: white;

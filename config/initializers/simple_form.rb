@@ -98,13 +98,13 @@ SimpleForm.setup do |config|
   config.label_class = 'control-label'
 
   # You can define the class to use on all forms. Default is simple_form.
-  # config.form_class = :simple_form
+  config.form_class = 'simple_form form-horizontal'
 
   # You can define which elements should obtain additional classes
   # config.generate_additional_classes_for = [:wrapper, :label, :input]
 
   # Whether attributes are required by default (or not). Default is true.
-  # config.required_by_default = true
+  config.required_by_default = false
 
   # Tell browsers whether to use default HTML5 validations (novalidate option).
   # Default is enabled.
@@ -126,7 +126,7 @@ SimpleForm.setup do |config|
   # config.time_zone_priority = nil
 
   # Default priority for country inputs.
-  # config.country_priority = nil
+  config.country_priority = ['United States']
 
   # Default size for text inputs.
   # config.default_input_size = 50

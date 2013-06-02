@@ -4,6 +4,14 @@
   <%= f.error_notification %>
 
   <%= f.input :name %>
+  <div class="row">
+  	<div class="span2 offset2">
+  		<div class="well well-small">
+  			<%= image_tag @user.mugshot(:medium) %>
+  		</div>	
+  	</div>
+  </div>
+  <%= f.input :mugshot, label: "Profile Picture" %>
   <%= f.input :email %>
   <%= f.input :password, label: "New Password", autocomplete: "off" %>
   <%= f.input :password_confirmation, label: "New Password Confirmation", autocomplete: "off" %>

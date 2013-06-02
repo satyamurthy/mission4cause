@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130602023907) do
+ActiveRecord::Schema.define(:version => 20130602035114) do
 
 # Could not dump table "causes" because of following StandardError
 #   Unknown type 'check_boxes' for column 'mission_category'
@@ -30,6 +30,10 @@ ActiveRecord::Schema.define(:version => 20130602023907) do
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
     t.string   "name"
+    t.string   "mugshot_file_name"
+    t.string   "mugshot_content_type"
+    t.integer  "mugshot_file_size"
+    t.datetime "mugshot_updated_at"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

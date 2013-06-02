@@ -11,28 +11,10 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130601065551) do
+ActiveRecord::Schema.define(:version => 20130602023907) do
 
-  create_table "causes", :force => true do |t|
-    t.string   "description"
-    t.datetime "created_at",         :null => false
-    t.datetime "updated_at",         :null => false
-    t.integer  "user_id"
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
-    t.datetime "image_updated_at"
-    t.string   "image_remote_url"
-    t.string   "cause_name"
-    t.string   "country"
-    t.string   "cause_country"
-    t.string   "long_description"
-  end
-
-  add_index "causes", ["cause_country"], :name => "index_causes_on_cause_country"
-  add_index "causes", ["cause_name"], :name => "index_causes_on_cause_name"
-  add_index "causes", ["country"], :name => "index_causes_on_country"
-  add_index "causes", ["user_id"], :name => "index_causes_on_user_id"
+# Could not dump table "causes" because of following StandardError
+#   Unknown type 'check_boxes' for column 'mission_category'
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false

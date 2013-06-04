@@ -1,18 +1,20 @@
 <div class="row">
 	<div class="span8">
 		<div class="well">
-			<%= image_tag @cause.image %>
 		<p>
-		  Name : <%= @cause.cause_name %>
+			<%= image_tag @cause.image %>
+		</p>
+		<h4>
+		<p>
+			<%= @cause.cause_name %> is active in <%= @cause.cause_country %>. They can be reached via email at <%= @cause.cause_email %> or on phone at
+			+<%= @cause.cause_phone %> 
+			Thier vision reads "<%= @cause.description %>". More information can be found on thier website <%= @cause.cause_url %>.
 		</p>
 		<p>
-		  Vision : <%= @cause.description %>
+		  Vision : 
 		</p>
 		<p>
 		  Country : <%= @cause.cause_country %>
-		</p>
-		<p>
-			Website : <%= @cause.cause_url %>
 		</p>
 		<p>
 			Twitter : <%= @cause.cause_twitter %>
@@ -24,12 +26,13 @@
 		  About : <%= @cause.long_description %>
 		</p>		
 		<p>
-		  <small>Added by : <%= @cause.user.name %></small>
+		  <small>added by <%= @cause.user.name %></small>
 		</p>
 		<% if current_user == @cause.user %>
 		<%= link_to 'Edit', edit_cause_path(@cause) %> |
 		<% end %>
 		<%= link_to 'Back', causes_path %>
+	</h4>
 	</div>
 	</div>
 		<div class="span4">

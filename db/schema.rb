@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130604043546) do
+ActiveRecord::Schema.define(:version => 20130604054628) do
 
 # Could not dump table "causes" because of following StandardError
 #   Unknown type 'check_boxes' for column 'mission_category'

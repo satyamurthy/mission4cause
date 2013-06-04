@@ -1,11 +1,12 @@
 class Cause < ActiveRecord::Base
-  attr_accessible :description, :image, :image_remote_url, :cause_name, :cause_country, :long_description, :cause_url
+  attr_accessible :description, :image, :image_remote_url, :cause_name, :cause_country, :long_description, :cause_url, :cause_twitter, :cause_facebook_url
 
   validates :description, presence: :true
   validates :user_id, presence: true
   validates :cause_name, presence: true
   validates :cause_country, presence: true
   validates :cause_url, :format => URI::regexp(%w(http https))
+  validates :cause_facebook_url, :format => URI::regexp(%w(http https))
   validates_attachment :image, presence: true,
   								content_type: { content_type: ['image/jpeg', 'image/jpg', 'image/png', 'image/gif']},
   								size: { less_than: 5.megabytes }

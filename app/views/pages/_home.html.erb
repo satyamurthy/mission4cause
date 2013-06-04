@@ -1,15 +1,25 @@
 <% if user_signed_in? %>
-	<div class="center hero-unit">
-	    <h1>Mission Support!</h1>
-	    <p>MissionForCause.com is the destination for mission support. Connect with church planting among unreached people groups. More than 2,500 missionaries serve around the world in remote places where there are no churches, or even work being done to establish one. Working in the context of tribal cultures and languages, missionaries bring God's Word to those isolated from the Gospel, planting churches where Christ is not yet named. </p>
-	    <p>
-	    	<%= link_to 'BROWSE CAUSES',  "#" , class: "btn btn-large btn-custom" %>
-	    	<%= link_to 'HELP MISSIONARIES',  "#" , class: "btn btn-large btn-custom1" %>
-	    	<%= link_to 'MISSION TRIPS',  "#" , class: "btn btn-large btn-custom3" %>
-	    </p>
-	</div>
+		<div class="row">
+			<div class="span6">
+		    <p><h1>MISSION FOR CAUSE</h1></p>
+					<h4>MissionForCause.com is the destination for mission support. Connect with church planting among unreached people groups. More than 2,500 missionaries serve around the world in remote places where there are no churches, or even work being done to establish one.</h4>
+		    	<p>
+		    		<%= link_to 'Support Causes',  causes_path , class: "btn btn-large btn-info btn-block" %>
+		    	</p>
+		    	<p>
+		    		<%= link_to 'Help Missionaries',  missionaries_path , class: "btn btn-large btn-danger btn-block" %>
+		    	</p>
+		    	<p>
+		    		<%= link_to 'Go On a Mission Trip',  "#" , class: "btn btn-large btn-success btn-block" %>
+		    	</p>
+	    </div>
+	  <div class="span6">
+	  	<iframe width="550" height="315" src="http://www.youtube.com/embed/4Pn-f6Z-qj0?rel=0" frameborder="0">
+	  </iframe>
+	  	</div>
+	  </div>
 	<% else %>
-	<p><iframe src="https://www.facebook.com/video/embed?video_id=10152765705315644" width="100%" height="550px" frameborder="0"></iframe></p>
+	<p><iframe src="https://www.facebook.com/video/embed?video_id=10152765705315644" width="640" height="360" frameborder="0"></iframe></p>
 		<div class="center hero-unit">
 		    <h1>Welcome to Mission For Cause!
 		   </h1>

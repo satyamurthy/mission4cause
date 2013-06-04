@@ -12,7 +12,8 @@ class User < ActiveRecord::Base
   validates_attachment :mugshot, presence: true,
   									content_type: { content_type: ['image/jpeg', 'image/jpg', 'image/gif', 'image/png'] },
   									size: { less_than: 5.megabytes}
+ 
   # attr_accessible :title, :body
 
-  has_many :causes, :dependent => :destroy
+  has_many :causes
 end

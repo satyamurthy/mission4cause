@@ -12,8 +12,8 @@
   	</div>
   </div>
   <%= f.input :mugshot, label: "Profile Picture" %>
-  <%= f.input :email %>
-  <%= f.input :password, label: "New Password", autocomplete: "off" %>
+  <%= f.input :email, with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/ %>
+  <%= f.input :password, label: "New Password", autocomplete: "off", minimum: 8 %>
   <%= f.input :password_confirmation, label: "New Password Confirmation", autocomplete: "off" %>
   <%= f.input :current_password %>
 

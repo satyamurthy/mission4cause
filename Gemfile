@@ -9,7 +9,7 @@ gem 'aws-sdk'
 gem 'will_paginate', '3.0.3'
 gem 'bootstrap-will_paginate', '0.0.6'
 gem 'country_select'
-gem 'rack-mini-profiler'
+# gem 'rack-mini-profiler'
 
 group :production do
 	gem 'pg'

@@ -16,4 +16,5 @@ class User < ActiveRecord::Base
   # attr_accessible :title, :body
 
   has_many :causes
+  has_many :missionaries
 end

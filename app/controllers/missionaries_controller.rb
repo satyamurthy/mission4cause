@@ -26,7 +26,7 @@ class MissionariesController < ApplicationController
   # GET /missionaries/new
   # GET /missionaries/new.json
   def new
-    @missionary = Missionary.new
+    @missionary = current_user.missionaries.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -36,13 +36,13 @@ class MissionariesController < ApplicationController
 
   # GET /missionaries/1/edit
   def edit
-    @missionary = Missionary.find(params[:id])
+    @missionary = current_user.missionaries.find(params[:id])
   end
 
   # POST /missionaries
   # POST /missionaries.json
   def create
-    @missionary = Missionary.new(params[:missionary])
+    @missionary = current_user.missionaries.new(params[:missionary])
 
     respond_to do |format|
       if @missionary.save
@@ -58,7 +58,7 @@ class MissionariesController < ApplicationController
   # PUT /missionaries/1
   # PUT /missionaries/1.json
   def update
-    @missionary = Missionary.find(params[:id])
+    @missionary = current_user.missionaries.find(params[:id])
 
     respond_to do |format|
       if @missionary.update_attributes(params[:missionary])
@@ -74,7 +74,7 @@ class MissionariesController < ApplicationController
   # DELETE /missionaries/1
   # DELETE /missionaries/1.json
   def destroy
-    @missionary = Missionary.find(params[:id])
+    @missionary = current_user.missionaries.find(params[:id])
     @missionary.destroy
 
     respond_to do |format|

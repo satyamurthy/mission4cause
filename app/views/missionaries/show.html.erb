@@ -4,7 +4,12 @@
 			<p>
 			  <%= @missionary.missbio %>
 			</p>
+			<p>
+			  <%= @missionary.user.name %>
+			</p>
+			<% if current_user == @missionary.user %>			
 			<%= link_to 'Edit', edit_missionary_path(@missionary) %> |
+			<% end %>
 			<%= link_to 'Back', missionaries_path %>
 		</div>
     </div>

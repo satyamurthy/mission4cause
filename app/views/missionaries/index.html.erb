@@ -1,0 +1,20 @@
+<h1>Listing missionaries</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Missbio</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <%= render @missionaries %>
+  </tbody>
+</table>
+
+<br />
+
+<%= link_to 'New Missionary', new_missionary_path %>

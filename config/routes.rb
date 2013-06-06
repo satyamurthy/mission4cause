@@ -1,4 +1,7 @@
 Mission4cause::Application.routes.draw do
+  resources :missionaries
+
+
   resources :causes
 
 

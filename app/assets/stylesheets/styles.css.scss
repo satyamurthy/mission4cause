@@ -37,8 +37,8 @@ body{
     float: left;
     -webkit-border-radius: 0px;
     -moz-border-radius: 0px;
-    border-radius: 0px;
-    box-shadow: 1px 1px 4px #444;
+    border-radius: 2px;
+    box-shadow: 1px 1px 3px #444;
     width: 214px;
 }
 
@@ -50,5 +50,9 @@ body{
 }
 
 .description {
+    margin: 10px 0 5px;
+}
+
+.missbio {
     margin: 10px 0 5px;
 }

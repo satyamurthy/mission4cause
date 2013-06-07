@@ -1,9 +1,18 @@
-<tr>
-	<td><%= image_tag missionary.avatar(:medium) %></td>
-  <td><%= missionary.missbio %></td>
-  <td><%= link_to 'Show', missionary %></td>
+<div class="box">
+<%= image_tag missionary.avatar(:medium) %>
+<p class=missbio>
+<%= missionary.missbio %>
+</p>
+    <p>
+        <strong>
+            Posted by <%= missionary.user.name %>
+        </strong>
+    </p>
+<%= link_to 'Show', missionary %>
   <% if current_user == missionary.user %>
-  <td><%= link_to 'Edit', edit_missionary_path(missionary) %></td>
-  <td><%= link_to 'Destroy', missionary, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  <p>
+		<%= link_to 'Edit', edit_missionary_path(missionary) %>
+		<%= link_to 'Destroy', missionary, method: :delete, data: { confirm: 'Are you sure?' } %>
+	</p>
   <% end %>
-</tr>
+</div>

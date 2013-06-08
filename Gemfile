@@ -10,6 +10,7 @@ gem 'will_paginate', '3.0.3'
 gem 'bootstrap-will_paginate', '0.0.6'
 gem 'country_select'
 gem 'acts-as-taggable-on'
+gem 'google-analytics-rails'
 # gem 'rack-mini-profiler'
 
 group :production do

@@ -1,10 +1,30 @@
-<div class="alert alert-block">
-  <button type="button" class="close" data-dismiss="alert">&times;</button>
-  <h4>Warning!</h4>
-  Mission4cause is still Work-In-Progress, feel free to play around, but data might be overwritten
-</div>
 <% if user_signed_in? %>
 	<div class="row">
+    <div class="well well-small">
+    <div id="myCarousel" class="carousel slide">
+      <!-- Carousel items -->
+        <div class="carousel-inner">
+          <div class="active item">
+            <a href="myfile.htm">
+              <img src="https://s3.amazonaws.com/missionforacause/system/slider3.jpg">
+            </a>
+          </div>
+        <div class="item">
+          <a href="myfile.htm">
+            <img src="https://s3.amazonaws.com/missionforacause/system/slider2.jpg">
+          </a>
+        </div>
+        <div class="item">
+          <a href="myfile.htm">
+            <img src="https://s3.amazonaws.com/missionforacause/system/slider1.jpg">
+          </a>
+        </div>
+        </div>
+      <!-- Carousel nav -->
+        <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+        <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+      </div>
+  </div>
 		<div class="span6">
 			<p><h1>( Mission For Cause )</h1></p>
 			<h4>MissionForCause.com is the destination for mission support. Connect with a church, missionary or people fighting for a cause. Support the causes you love, and enourage charities that are doing some amazing work. You can even go on a mission trip to a remote part of the world and connect with people who are making a difference. It's our world, let's make it a better place, one mission at a time!</h4>
@@ -23,6 +43,11 @@
 	  	</div>
 	</div>
 <% else %>
+<div class="alert alert-block">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <h4>Warning!</h4>
+  Mission4cause is still Work-In-Progress, feel free to play around, but data might be overwritten
+</div>
 	<div class="row">
 		<div class="span6">
 			<p><h1>Welcome to Mission For Cause</h1></p>

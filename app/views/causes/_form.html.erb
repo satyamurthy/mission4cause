@@ -7,7 +7,6 @@
   	<%= f.input :cause_name, label: "Name of the Cause", :input_html => { :maxlength => 40, :size => 100 } %>
 	<%= f.input :image, label: "Upload a logo (or) photo" %>
 	<%= f.input :image_remote_url, label: "(or) paste a URL" %>
-	<%= f.input :cause_video, as: :text, input_html: { :maxlength => 500, rows: "3" }, :placeholder => 'Paste the youtube or vimeo URL here', label: "Mission Video", rows: "1" %>
 	<%= f.input :cause_country, label: "Country where active" %>
 	<%= f.input :cause_email, label: "Email", :placeholder => 'pastor@mychurch.org' %>
 	<%= f.input :cause_url, label: "Website", hint: "Don't have a website? get one here", :placeholder => 'http://www.example.com' %>

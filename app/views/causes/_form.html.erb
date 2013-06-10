@@ -4,18 +4,23 @@
   <%= f.full_error :image_file_size, class: "alert alert-error" %>
   <%= f.full_error :image_content_type, class: "alert alert-error" %>
 
-  	<%= f.input :cause_name, label: "Name of the Cause", :input_html => { :maxlength => 40, :size => 100 } %>
+  <%= f.input :cause_name, label: "Name of the Cause", :input_html => { :maxlength => 40, :size => 100 } %>
 	<%= f.input :image, label: "Upload a logo (or) photo" %>
 	<%= f.input :image_remote_url, label: "(or) paste a URL" %>
+	<%= f.input :cause_video, as: :text, input_html: { :maxlength => 500, rows: "3" }, :placeholder => 'Paste the youtube or vimeo URL here', label: "Mission Video", rows: "1" %>
 	<%= f.input :cause_country, label: "Country where active" %>
 	<%= f.input :cause_email, label: "Email", :placeholder => 'pastor@mychurch.org' %>
 	<%= f.input :cause_url, label: "Website", hint: "Don't have a website? get one here", :placeholder => 'http://www.example.com' %>
-	<%= f.input :cause_phone, :as => :tel, label: "Phone", :placeholder => '12482277664' %>
+	<%= f.input :cause_phone, :as => :tel, label: "Phone", :placeholder => '18001231234' %>
 	<%= f.input :cause_twitter, label: "Twitter Id", :placeholder => 'eg. @missionforcause' %>
 	<%= f.input :cause_facebook_url, label: "Facebook Page" %>
 	<%= f.input :description, as: :text, label: "Vision", input_html: { :maxlength => 100, rows: "3" }, :placeholder => '100 characters only' %>
 	<%= f.input :tag_list, label: "Key focus", :placeholder => 'eg. Poverty, Hunger, etc.', hint: "Seperated by commas" %>
-	<%= f.input :long_description, as: :text, label: "Description", input_html: { :maxlength => 2000, rows: "6" }, :placeholder => 'You can add a longer description here' %>
+	<%
+=begin %>
+	<%= f.input :long_description, as: :text, label: "Description", input_html: { :maxlength => :limit => nil, rows: "6" }, :placeholder => 'You can add a longer description here' %>
+	<%
+=end %>
 </div>
 
   <div class="form-actions">

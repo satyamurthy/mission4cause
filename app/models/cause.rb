@@ -8,7 +8,6 @@ class Cause < ActiveRecord::Base
   validates :cause_phone, presence: true
   validates :cause_country, presence: true
   validates :tag_list, presence: true
-  validates :long_description, presence: true
   validates_attachment :image, presence: true,
   								content_type: { content_type: ['image/jpeg', 'image/jpg', 'image/png', 'image/gif']},
   								size: { less_than: 5.megabytes }

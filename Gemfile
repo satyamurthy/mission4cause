@@ -11,6 +11,7 @@ gem 'bootstrap-will_paginate', '0.0.6'
 gem 'country_select'
 gem 'acts-as-taggable-on'
 gem 'google-analytics-rails'
+gem 'newrelic_rpm'
 # gem 'rack-mini-profiler'
 
 group :production do

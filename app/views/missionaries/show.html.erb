@@ -1,17 +1,22 @@
 <div class="row">
-    <div class="span6 offset3">
+    <div class="span6 offset0">
+    	<p>
+      	<div class="page-header">
+  				<h1><%= @missionary.missname %><small> - Hyderabad, India</small></h1>
+				</div>
+      </p>
         <div class="well">
         	<%= image_tag @missionary.avatar %>
-			<p>
-			  <%= @missionary.missbio %>
-			</p>
-			<p>
-			  <%= @missionary.user.name %>
-			</p>
-			<% if current_user == @missionary.user %>			
-			<%= link_to 'Edit', edit_missionary_path(@missionary) %> |
-			<% end %>
-			<%= link_to 'Back', missionaries_path %>
-		</div>
+					<p>
+						<%= @missionary.missbio %>
+					</p>
+					<p>
+					  <%= @missionary.user.name %>
+					</p>
+					<% if current_user == @missionary.user %>			
+						<%= link_to 'Edit', edit_missionary_path(@missionary) %> |
+					<% end %>
+					<%= link_to 'Back', missionaries_path %>
+				</div>
     </div>
 </div>

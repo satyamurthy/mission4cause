@@ -4,7 +4,7 @@ class MissionariesController < ApplicationController
   # GET /missionaries
   # GET /missionaries.json
   def index
-    @missionaries = Missionary.all
+    @missionaries = Missionary.order("created_at desc")
 
     respond_to do |format|
       format.html # index.html.erb

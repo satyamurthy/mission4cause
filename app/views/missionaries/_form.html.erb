@@ -3,8 +3,9 @@
     <%= f.full_error :image_file_size, class: "alert alert-error" %>
  		<%= f.full_error :image_content_type, class: "alert alert-error" %>
 
+ 		<%= f.input :missname, input_html: { :maxlength => 30, rows: "1" }, :placeholder => "Missionary's real name", label: "Name" %>
   	<%= f.input :avatar, label: "Upload an image" %>
-  	<%= f.input :missbio, as: :text, input_html: { rows: "3" } %>
+  	<%= f.input :missbio, as: :text, input_html: { :maxlength => 200, rows: "3" }, :placeholder => '200 characters only', label: "Missionary Bio"  %>
 
   	<div class="form-actions">
     <%= f.button :submit, class: "btn btn-primary" %>

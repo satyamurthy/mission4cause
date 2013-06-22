@@ -1,6 +1,7 @@
 class Missionary < ActiveRecord::Base
-  attr_accessible :missbio, :avatar
+  attr_accessible :missbio, :avatar, :missname
 
+  validates :missname, presence: true
   validates :missbio, presence: true
   validates :user_id, presence: true
   validates_attachment :avatar, presence: true,

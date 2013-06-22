@@ -1,5 +1,5 @@
 <div class="box">
-<%= image_tag missionary.avatar(:medium) %>
+<%= link_to (image_tag missionary.avatar(:medium)), missionary %>
 <p class=missbio>
 <%= missionary.missbio %>
 </p>
@@ -8,11 +8,10 @@
             Posted by <%= missionary.user.name %>
         </strong>
     </p>
-<%= link_to 'Show', missionary %>
   <% if current_user == missionary.user %>
   <p>
 		<%= link_to 'Edit', edit_missionary_path(missionary) %>
-		<%= link_to 'Destroy', missionary, method: :delete, data: { confirm: 'Are you sure?' } %>
+		<%= link_to 'Delete', missionary, method: :delete, data: { confirm: 'Are you sure?' } %>
 	</p>
   <% end %>
 </div>

@@ -32,14 +32,16 @@ body{
 
 .box {
     margin: 10px;
-    padding: 5px;
+    padding: 10px;
     font-size: 13px;
     line-height: 1.4em;
     float: left;
     -webkit-border-radius: 0px;
     -moz-border-radius: 0px;
-    border-radius: 2px;
+    border-radius: 0px;
     box-shadow: 0px 0px 1px #444;
+    color: $gray;
+    background-color: $white;
     width: 214px;
 }
 

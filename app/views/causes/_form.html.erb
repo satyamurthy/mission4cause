@@ -14,7 +14,7 @@
 	<%= f.input :cause_phone, :as => :tel, label: "Phone", :placeholder => '18001231234' %>
 	<%= f.input :cause_twitter, label: "Twitter Id", :placeholder => 'eg. @missionforcause' %>
 	<%= f.input :cause_facebook_url, label: "Facebook Page" %>
-	<%= f.input :description, as: :text, label: "Vision", input_html: { :maxlength => 100, rows: "3" }, :placeholder => '100 characters only' %>
+	<%= f.input :description, as: :text, label: "Vision", input_html: { :maxlength => nil, rows: "5" }, :placeholder => '100 characters only' %>
 	<%= f.input :tag_list, label: "Key focus", :placeholder => 'eg. Poverty, Hunger, etc.', hint: "Seperated by commas" %>
 	<%
 =begin %>

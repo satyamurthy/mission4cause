@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130622010038) do
+ActiveRecord::Schema.define(:version => 20130623035339) do
 
 # Could not dump table "causes" because of following StandardError
 #   Unknown type 'check_boxes' for column 'mission_category'
@@ -31,6 +31,10 @@ ActiveRecord::Schema.define(:version => 20130622010038) do
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
     t.string   "missname"
+    t.string   "misscountry"
+    t.string   "missfacebook"
+    t.string   "misstwitter"
+    t.text     "missstory"
   end
 
   add_index "missionaries", ["user_id"], :name => "index_missionaries_on_user_id"

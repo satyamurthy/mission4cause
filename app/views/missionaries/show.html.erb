@@ -2,7 +2,7 @@
     <div class="span6 offset0">
     	<p>
       	<div class="page-header">
-  				<h1><%= @missionary.missname %><small> - Hyderabad, India</small></h1>
+  				<h1><%= @missionary.missname %><small> - <%= @missionary.misscountry %></small></h1>
 				</div>
       </p>
         <div class="well">
@@ -12,6 +12,9 @@
 					</p>
 					<p>
 					  <%= @missionary.user.name %>
+					</p>
+					<p>
+					  Mission Base: <%= @missionary.misscountry %>
 					</p>
 					<% if current_user == @missionary.user %>			
 						<%= link_to 'Edit', edit_missionary_path(@missionary) %> |

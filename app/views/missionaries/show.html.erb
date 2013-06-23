@@ -16,6 +16,15 @@
 					<p>
 					  Mission Base: <%= @missionary.misscountry %>
 					</p>
+					<p>
+					  Facebook: <%= @missionary.missfacebook %>
+					</p>
+					<p>
+					  Twitter: <%= @missionary.misstwitter %>
+					</p>
+					<p>
+					  My Story: <%= @missionary.missstory %>
+					</p>
 					<% if current_user == @missionary.user %>			
 						<%= link_to 'Edit', edit_missionary_path(@missionary) %> |
 					<% end %>

@@ -1,20 +1,22 @@
 <div class="row">
-    <div class="span6 offset0">
+  <div class="span9">
+    <div class="well">
     	<p>
-      	<div class="page-header">
-  				<h1><%= @missionary.missname %><small> - <%= @missionary.misscountry %></small></h1>
-				</div>
+  			<h1>
+  				<%= @missionary.missname %><small> - <%= @missionary.misscountry %></small>
+  			</h1>
       </p>
-        <div class="well">
-        	<%= image_tag @missionary.avatar %>
+    <p>
+      <%= image_tag @missionary.avatar %>
+    </p>
 					<p>
 						<%= @missionary.missbio %>
 					</p>
 					<p>
-					  <%= @missionary.user.name %>
+					  Mission Base: <%= @missionary.misscountry %>
 					</p>
 					<p>
-					  Mission Base: <%= @missionary.misscountry %>
+					  Address: <%= @missionary.missaddress %>
 					</p>
 					<p>
 					  Facebook: <%= @missionary.missfacebook %>
@@ -25,10 +27,47 @@
 					<p>
 					  My Story: <%= @missionary.missstory %>
 					</p>
-					<% if current_user == @missionary.user %>			
-						<%= link_to 'Edit', edit_missionary_path(@missionary) %> |
+					<button class="btn"><i class="icon-chevron-left"></i>  <%= link_to 'Back', missionaries_path %> </button>
+					<% if current_user == @missionary.user %>
+					<button class="btn"><i class="icon-pencil"></i>  <%= link_to 'Edit Missionary', edit_missionary_path(@missionary) %></button>
 					<% end %>
-					<%= link_to 'Back', missionaries_path %>
 				</div>
     </div>
+    <div class="span3">
+		<div class="well well-small">
+			<h4>
+				Added by <%= @missionary.user.name %>
+			</h4>
+			<p>
+				<%= image_tag @missionary.user.mugshot%>
+			</p>
+			<p>
+			<table class="table table-striped">	
+				<tr>
+		  		<td>
+		  			<strong><%= @missionary.user.name %></strong>
+		  		</td>
+				</tr>
+		  	<tr>
+		  		<td>
+		  			<strong>I am from:</strong> <%= @missionary.user.usercountry %>
+		  		</td>
+				</tr>
+		  	<tr>
+		  		<td>
+		  			<strong>My motto:</strong> <%= @missionary.user.punchline %>
+		  		</td>
+				</tr>
+		  	<tr>
+		  		<td>
+		  			<strong>I fight:</strong> <%= @missionary.user.heartcause %>
+		  		</td>
+				</tr>
+			</table>
+		</p>
+		<% if current_user == @missionary.user %>
+				<button class="btn btn-block"><i class="icon-user"></i>  <%= link_to 'Edit my profile', edit_user_registration_path %></button>
+		<% end %>
+	</div>
+	</div>
 </div>

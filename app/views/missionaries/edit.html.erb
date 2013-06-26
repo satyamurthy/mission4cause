@@ -1,6 +1,11 @@
-<h1>Editing missionary</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @missionary %> |
-<%= link_to 'Back', missionaries_path %>
+<h2>
+	Editing <%= @missionary.missname %>
+</h2>
+<div class="row">
+	<div class="span8">
+		<%= render 'form' %>
+		<%= link_to 'Delete', @missionary, method: :delete, data: { confirm: 'Are you sure you want to delete?' }, class: "btn btn-danger" %> 
+		<%= link_to 'Show', @missionary, class: "btn btn-info" %> 
+		<%= link_to 'Back', missionaries_path, class: "btn" %>
+	</div>
+</div>

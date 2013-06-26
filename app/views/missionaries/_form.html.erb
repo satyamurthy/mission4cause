@@ -7,6 +7,7 @@
   	<%= f.input :avatar, label: "Upload a photo" %>
   	<%= f.input :missbio, as: :text, input_html: { :maxlength => 200, rows: "3" }, :placeholder => '200 characters only', label: "Missionary Bio"  %>
   	<%= f.input :misscountry, label: "Mission Base" %>
+    <%= f.input :missaddress, label: "Mission Address", as: :text, input_html: { :maxlength => 250, rows: "3" }, :placeholder => 'Do not enter home address, preferably church or your present mission base' %>
   	<%= f.input :missfacebook, label: "Facebook Profile", hint: "Don't have a profile? Create one here", :placeholder => 'facebook.com/mission4cause' %>
 		  <%= f.input :misstwitter, label: "Twitter", hint: "Don't have a Twitter? Create one here", :placeholder => '@mission4cause' %>
 		  <%= f.input :missstory, as: :text, input_html: { :maxlength => 5000, rows: "5" }, label: "My Story", :placeholder => 'Why I started this and my journey...' %>

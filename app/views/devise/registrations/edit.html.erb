@@ -16,6 +16,9 @@
   <%= f.input :password, label: "New Password", autocomplete: "off" %>
   <%= f.input :password_confirmation, label: "New Password Confirmation", autocomplete: "off" %>
   <%= f.input :current_password %>
+  <%= f.input :punchline, as: :text, input_html: { :maxlength => 200, rows: "3" }, :placeholder => '200 characters only', label: "My motto"  %>
+  <%= f.input :usercountry, label: "I am from" %>
+  <%= f.input :heartcause, label: "Causes I fight for", :placeholder => 'eg. Poverty, Hunger, Sex Traficking...' %>
 </div>
   <div class="form-actions">
     <%= f.submit "Update", class: "btn btn-primary"%>

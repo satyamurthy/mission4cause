@@ -1,6 +1,11 @@
-<h1>Editing cause</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @cause %> |
-<%= link_to 'Back', causes_path %>
+<h2>
+	Editing <%= @cause.cause_name %>
+</h2>
+<div class="row">
+	<div class="span8">
+		<%= render 'form' %>
+		<%= link_to 'Delete', @cause, method: :delete, data: { confirm: 'Are you sure you want to delete?' }, class: "btn btn-danger" %> 
+		<%= link_to 'Show', @cause, class: "btn btn-info" %> 
+		<%= link_to 'Back', causes_path, class: "btn" %>
+	</div>
+</div>

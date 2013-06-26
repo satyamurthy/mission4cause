@@ -10,9 +10,12 @@
   <%= f.input :email %>
   <%= f.input :password %>
   <%= f.input :password_confirmation %>
+  <%= f.input :punchline, as: :text, input_html: { :maxlength => 200, rows: "3" }, :placeholder => '200 characters only', label: "My motto"  %>
+  <%= f.input :usercountry, label: "I am from" %>
+  <%= f.input :heartcause, label: "I fight for", :placeholder => 'Eg. Hunger, Poverty...' %>
 
   <div class="form-actions">
-    <%= f.submit "Sign up", class: "btn btn-large btn-info" %>
+    <%= f.submit "Sign Up", class: "btn btn-large btn-info" %>
   </div>
 <% end %>
 </div>

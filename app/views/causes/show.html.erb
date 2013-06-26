@@ -1,5 +1,5 @@
 <div class="row">
-	<div class="span8">
+	<div class="span9">
 		<div class="well">
 		<p><h2><%= @cause.cause_name.upcase %></h2></p>
 		<p>
@@ -14,53 +14,66 @@
 			Thier vision reads "<%= @cause.description %>". More information can be found on thier website <%= @cause.cause_url %>.
 		</p>
 		<p>
-		  Vision : 
+		  Vision: 
 		</p>
 		<p>
-			Key Focus : <%= @cause.tag_list %>
+			Key Focus: <%= @cause.tag_list %>
 		</p>
 		<p>
-		  Country : <%= @cause.cause_country %>
+		  Country: <%= @cause.cause_country %>
 		</p>
 		<p>
-			Twitter : <%= @cause.cause_twitter %>
+		  Address: <%= @cause.causeaddress %> | +<%= @cause.cause_phone %>
 		</p>
 		<p>
-			Facebook : <%= @cause.cause_facebook_url %>
+			Twitter: <%= @cause.cause_twitter %>
 		</p>
 		<p>
-		  About : <%= @cause.long_description %>
-		</p>		
-		<p>
-		  <small>added by <%= @cause.user.name %></small>
+			Facebook: <%= @cause.cause_facebook_url %>
 		</p>
+		<p>
+		  About: <%= @cause.long_description %>
+		</p>
+		<button class="btn"><i class="icon-chevron-left"></i>  <%= link_to 'Back', causes_path %></button>	
 		<% if current_user == @cause.user %>
-		<%= link_to 'Edit', edit_cause_path(@cause) %> |
+		<button class="btn"><i class="icon-pencil"></i>  <%= link_to 'Edit Cause', edit_cause_path(@cause) %></button> 
 		<% end %>
-		<%= link_to 'Back', causes_path %>
 	</div>
 	</div>
-		<div class="span4">
+		<div class="span3">
 		<div class="well well-small">
-		<p><%= image_tag @cause.image %></p>
-		<p>
-		  Name : <%= @cause.cause_name %>
-		</p>
-		<p>
-		  Vision : <%= @cause.description %>
-		</p>
-		<p>
-		  Country : <%= @cause.cause_country %>
-		</p>
-		<p>
-		  About Me : <%= @cause.long_description %>
+			<h4>
+				Added by <%= @cause.user.name %>
+			</h4>
+			<p>
+				<%= image_tag @cause.user.mugshot%>
+			</p>
+			<p>
+			<table class="table table-striped">	
+				<tr>
+		  		<td>
+		  			<strong><%= @cause.user.name %></strong>
+		  		</td>
+				</tr>
+		  	<tr>
+		  		<td>
+		  			<strong>I am from:</strong> <%= @cause.user.usercountry %>
+		  		</td>
+				</tr>
+		  	<tr>
+		  		<td>
+		  			<strong>My motto:</strong> <%= @cause.user.punchline %>
+		  		</td>
+				</tr>
+		  	<tr>
+		  		<td>
+		  			<strong>I fight:</strong> <%= @cause.user.heartcause %>
+		  		</td>
+				</tr>
+			</table>
 		</p>
 		<% if current_user == @cause.user %>
-			<div class="btn-group">
-				<button class="btn"><%= link_to 'Add a cause', new_cause_path %></button>
-				<button class="btn"><%= link_to 'Edit my profile', edit_user_registration_path %></button>
-	        	<button class="btn"><%= link_to 'Logout', destroy_user_session_path, method: :delete %></button>
-        	</div>
+				<button class="btn btn-block"><i class="icon-user"></i>  <%= link_to 'Edit my profile', edit_user_registration_path %></button>
 		<% end %>
 	</div>
 	</div>

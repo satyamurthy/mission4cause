@@ -1,7 +1,11 @@
 <div class="row">
 	<div class="span9">
 		<div class="well">
-		<p><h2><%= @cause.cause_name.upcase %></h2></p>
+		<p>
+			<h2>
+				<%= @cause.cause_name.upcase %> <small><%= @cause.cause_country %></small>
+			</h2>
+		</p>
 		<p>
 			<%= image_tag @cause.image %>
 		</p>	
@@ -9,31 +13,33 @@
 			<%= raw @cause.cause_video %>
 		</p>
 		<p>
-			<%= @cause.cause_name %> is active in <%= @cause.cause_country %>. They can be reached via email at <%= @cause.cause_email %> or on phone at
-			+<%= @cause.cause_phone %> 
-			Thier vision reads "<%= @cause.description %>". More information can be found on thier website <%= @cause.cause_url %>.
+			<blockquote><%= @cause.description %></blockquote>
 		</p>
-		<p>
-		  Vision: 
-		</p>
-		<p>
-			Key Focus: <%= @cause.tag_list %>
-		</p>
-		<p>
-		  Country: <%= @cause.cause_country %>
-		</p>
-		<p>
-		  Address: <%= @cause.causeaddress %> | +<%= @cause.cause_phone %>
-		</p>
-		<p>
-			Twitter: <%= @cause.cause_twitter %>
-		</p>
-		<p>
-			Facebook: <%= @cause.cause_facebook_url %>
-		</p>
-		<p>
-		  About: <%= @cause.long_description %>
-		</p>
+		<dl class="dl-horizontal">		
+			<dt>Key Focus:</dt>
+			<dd><%= @cause.tag_list %></dd>
+			
+			<dt>Country:</dt>
+  		<dd><%= @cause.cause_country %></dd>
+  		
+  		<dt>Email:</dt>
+  		<dd><%= @cause.cause_email %></dd>
+  		
+  		<dt>Address:</dt>
+  		<dd><%= @cause.causeaddress %></dd>
+
+  		<dt>Phone</dt>
+  		<dd>+<%= @cause.cause_phone %></dd>
+
+  		<dt>Website</dt>
+  		<dd><%= link_to @cause.cause_url, @cause.cause_url, :target => '_blank' %></dd>
+
+  		<dt>Facebook</dt>
+  		<dd><%= link_to @cause.cause_facebook_url, @cause.cause_facebook_url, :target => '_blank' %></dd>
+
+  		<dt>Twitter ID</dt>
+  		<dd><%= @cause.cause_twitter %></dd>
+			</dl>
 		<button class="btn"><i class="icon-chevron-left"></i>  <%= link_to 'Back', causes_path %></button>	
 		<% if current_user == @cause.user %>
 		<button class="btn"><i class="icon-pencil"></i>  <%= link_to 'Edit Cause', edit_cause_path(@cause) %></button> 
@@ -49,7 +55,7 @@
 				<%= image_tag @cause.user.mugshot%>
 			</p>
 			<p>
-			<table class="table table-striped">	
+			<table class="table table-condensed">	
 				<tr>
 		  		<td>
 		  			<strong><%= @cause.user.name %></strong>
@@ -69,12 +75,20 @@
 		  		<td>
 		  			<strong>I fight:</strong> <%= @cause.user.heartcause %>
 		  		</td>
+		  		<tr>
+		  		<td>
+		  			<strong>My blog: </strong> <%= link_to @cause.user.userblog, @cause.user.userblog, :target => '_blank' %>
+		  		</td>
+		  	</tr>
 				</tr>
 			</table>
 		</p>
 		<% if current_user == @cause.user %>
 				<button class="btn btn-block"><i class="icon-user"></i>  <%= link_to 'Edit my profile', edit_user_registration_path %></button>
 		<% end %>
+	</div>
+	<div class="well well-small">
+		<script type="text/javascript" src="https://www.ribbon.co/ribbon-modal.js"></script><a href="http://rbn.co/281af0">Support this cause</a>
 	</div>
 	</div>
 </div>

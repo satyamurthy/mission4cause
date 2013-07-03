@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130623225942) do
+ActiveRecord::Schema.define(:version => 20130702161021) do
 
 # Could not dump table "causes" because of following StandardError
 #   Unknown type 'check_boxes' for column 'mission_category'
@@ -78,6 +78,7 @@ ActiveRecord::Schema.define(:version => 20130623225942) do
     t.string   "punchline"
     t.string   "usercountry"
     t.string   "heartcause"
+    t.string   "userblog"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

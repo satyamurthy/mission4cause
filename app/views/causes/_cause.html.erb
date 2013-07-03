@@ -1,8 +1,9 @@
-<div class="box">
-	<%= link_to (image_tag cause.image(:medium)), cause %>
-	<p class="description">
-		<%= cause.description %>
-			<small>added by <%= cause.user.name %></small>
+<div class="box box-small">
+	<p>
+		<%= link_to (image_tag cause.image(:medium)), cause %>
+	</p>
+	<p>
+		<%= cause.cause_name %> <i>from</i> <%= cause.cause_country %>
 	</p>
 	<% if current_user == cause.user %>
 		<p>
